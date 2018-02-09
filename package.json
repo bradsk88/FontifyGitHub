@@ -1,0 +1,58 @@
+{
+  "name": "vsearch",
+  "version": "0.1.0",
+  "description": "Search extension for Vendasta resources",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js",
+    "builds": "npx webpack --config webpack.config.js --watch",
+    "zip": "npx webpack --config webpack.config.js; (cd dist && zip -r ../vSearch.zip ./*)",
+    "testonce": "npx jest",
+    "test": "npx jest --watch;"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json",
+        "useBabelrc": true
+      },
+      "__TRANSFORM_HTML__": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/vendasta/LABS/vSearch"
+  },
+  "keywords": [
+    "Vendasta",
+    "Search"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chrome": "0.0.57",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "jest": "^22.1.0-alpha.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "ts-jest": "^22.0.0",
+    "ts-loader": "^3.5.0",
+    "webpack": "^3.10.0"
+  }
+}
