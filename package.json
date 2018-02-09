@@ -1,6 +1,6 @@
 {
-  "name": "vsearch",
-  "version": "0.1.0",
+  "name": "fontifygithub",
+  "version": "0.0.1",
   "description": "Search extension for Vendasta resources",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",

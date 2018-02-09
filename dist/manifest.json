@@ -1,7 +1,7 @@
 {
   "name": "Fontify GitHub",
   "short_name": "Fontify",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Apply a font to specific GitHub users",
   "icons": {
     "24": "icons/icon24.png",
