@@ -1,5 +1,3 @@
-import './style.scss';
-
 function changeFont() {
     const topLevelComments : HTMLCollectionOf<Element> = document.getElementsByClassName('comment');
     for (let i = 0; i < topLevelComments.length; i++) {
@@ -14,6 +12,14 @@ function changeFont() {
         let div = deepComments[i];
         if (div instanceof HTMLElement) {
             formatDeep(div);
+        }
+    }
+
+    const diffComments : HTMLCollectionOf<Element> = document.getElementsByClassName('review-comment-contents');
+    for (let i = 0; i < diffComments.length; i++) {
+        let div = diffComments[i];
+        if (div instanceof HTMLElement) {
+            formatDiff(div);
         }
     }
 }
@@ -31,6 +37,14 @@ function formatDeep(div: HTMLElement) {
         formatCommentBody(div);
     }
 }
+
+function formatDiff(div: HTMLElement) {
+    if (isAuthorBrent(div)) {
+        div.style.fontFamily = 'Comic Sans MS';
+        formatCommentBody(div);
+    }
+}
+
 
 function formatCommentBody(div: HTMLElement) {
     const bodyDiv = div.getElementsByClassName('comment-body');

@@ -1,7 +1,7 @@
 {
   "name": "Fontify GitHub",
   "short_name": "Fontify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Apply a font to specific GitHub users",
   "icons": {
     "24": "icons/icon24.png",
@@ -16,19 +16,11 @@
         "https://github.com/*"
       ],
       "web_accessible_resources": [
-        "generated/Fontify.js",
-        "dist/style.css"
+        "generated/Fontify.js"
       ],
       "js": [
         "generated/Fontify.js"
-      ],
-      "css": [
-        "generated/Fontify.css"
       ]
     }
-  ],
-  "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-  }
+  ]
 }
