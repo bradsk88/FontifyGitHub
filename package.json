@@ -40,7 +40,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/chrome": "0.0.57",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "typescript": "^2.6.2"
   },
   "devDependencies": {
